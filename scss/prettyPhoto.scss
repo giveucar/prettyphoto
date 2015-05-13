@@ -1,0 +1,344 @@
+/* ------------------------------------------------------------------------
+	This you can edit.
+------------------------------------------------------------------------- */
+
+  $pp-images-path: "/bc/jquery-prettyPhoto/images" !default;
+
+	/* ----------------------------------
+		Default Theme
+	----------------------------------- */
+
+	.pp_top,
+	.pp_middle,
+	.pp_bottom { height: 13px; }
+
+	.pp_left, .pp_right, .pp_expand, .pp_contract, .pp_close, .pp_play, .pp_pause, .pp_arrow_previous, .pp_arrow_next{
+		background: url(#{$pp-images-path}/prettyPhoto/default/sprite.png);
+		background-repeat: no-repeat;
+	}
+	.pp_middle {
+		background: url(#{$pp-images-path}/prettyPhoto/default/sprite_x.png);
+		background-repeat: repeat-x;
+	}
+	.pp_content_container .pp_left, .pp_content_container .pp_right {
+		background: url(#{$pp-images-path}/prettyPhoto/default/sprite_y.png);
+		background-repeat: repeat-y;
+	}
+
+	.pp_top .pp_left { background-position: -78px -93px; } /* Top left corner */
+	.pp_top .pp_middle { background-position: top left; } /* Top pattern/color */
+	.pp_top .pp_right { background-position: -112px -93px; } /* Top right corner */
+
+	.pp_content .ppt { color: #f8f8f8; }
+	.pp_content_container .pp_left { background-position: -7px 0; padding-left: 13px; }
+	.pp_content_container .pp_right { background-position: top right; padding-right: 13px; }
+	.pp_content { background-color: #fff; } /* Content background */
+	.pp_next:hover { background: url(#{$pp-images-path}/prettyPhoto/default/sprite_next.png) center right  no-repeat; cursor: pointer; } /* Next button */
+	.pp_previous:hover { background: url(#{$pp-images-path}/prettyPhoto/default/sprite_prev.png) center left no-repeat; cursor: pointer; } /* Previous button */
+	.pp_expand { background-position: 0 -29px; cursor: pointer; width: 28px; height: 28px; } /* Expand button */
+	.pp_expand:hover { background-position: 0 -56px; cursor: pointer; } /* Expand button hover */
+	.pp_contract { background-position: 0 -84px; cursor: pointer; width: 28px; height: 28px; } /* Contract button */
+	.pp_contract:hover { background-position: 0 -113px; cursor: pointer; } /* Contract button hover */
+	.pp_close { width: 30px; height: 30px; background-position: 2px 1px; cursor: pointer; } /* Close button */
+	#pp_full_res .pp_inline { color: #000; }
+	.pp_gallery ul li a { background: url(#{$pp-images-path}/prettyPhoto/default/default_thumb.png) center center #f8f8f8; border:1px solid #aaa; }
+	.pp_gallery ul li a:hover,
+	.pp_gallery ul li.selected a { border-color: #fff; }
+	.pp_social { margin-top: 7px; }
+
+	.pp_gallery a.pp_arrow_previous,
+	.pp_gallery a.pp_arrow_next { position: static; left: auto; }
+	.pp_nav .pp_play,
+	.pp_nav .pp_pause { background-position: -51px 1px; height:30px; width:30px; }
+	.pp_nav .pp_pause { background-position: -51px -29px; }
+	.pp_details { position: relative; }
+	a.pp_arrow_previous,
+	a.pp_arrow_next { background-position: -31px -3px; height: 20px; margin: 4px 0 0 0; width: 20px; }
+	a.pp_arrow_next { left: 52px; background-position: -82px -3px; } /* The next arrow in the bottom nav */
+	//.pp_content_container .pp_details { margin-top: 5px; }
+	.pp_nav { clear: none; height: 30px; width: 110px; position: relative; }
+	.pp_nav .currentTextHolder{ font-family: Georgia; font-style: italic; color:#999; font-size: 11px; left: 75px; line-height: 25px; margin: 0; padding: 0 0 0 10px; position: absolute; top: 2px; }
+
+	//.pp_close:hover, .pp_nav .pp_play:hover, .pp_nav .pp_pause:hover, .pp_arrow_next:hover, .pp_arrow_previous:hover { opacity:0.7; }
+
+	.pp_description{ font-size: 11px; font-weight: bold; line-height: 14px; margin: 5px 50px 5px 0; }
+
+	.pp_bottom .pp_left { background-position: -78px -127px; } /* Bottom left corner */
+	.pp_bottom .pp_middle { background-position: bottom left; } /* Bottom pattern/color */
+	.pp_bottom .pp_right { background-position: -112px -127px; } /* Bottom right corner */
+
+	//.pp_loaderIcon { background: url(#{$pp-images-path}/prettyPhoto/default/loader.gif) center center no-repeat; } /* Loader icon */
+
+/* ------------------------------------------------------------------------
+	DO NOT CHANGE
+------------------------------------------------------------------------- */
+
+	.pp_pic_holder a:focus { outline:none; }
+
+	.pp_overlay {
+		background: #000;
+		// display: none;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 9500;
+	}
+
+	.pp_pic_holder {
+		// display: none;
+		position: absolute;
+		width: 100px;
+		z-index: 10000;
+	}
+
+
+	.pp_top {
+		//height: 13px;
+		position: relative;
+	}
+	* html .pp_top { padding: 0 13px; }
+
+	.pp_top .pp_left {
+		height: 13px;
+		left: 0;
+		position: absolute;
+		width: 20px;
+	}
+	.pp_top .pp_middle {
+		height: 13px;
+		left: 13px;
+		position: absolute;
+		right: 13px;
+	}
+		* html .pp_top .pp_middle {
+			left: 0;
+			position: static;
+		}
+
+	.pp_top .pp_right {
+		height: 13px;
+		left: auto;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 20px;
+	}
+
+	.pp_content { height: 40px; min-width: 40px; }
+	* html .pp_content { width: 40px; }
+
+	// .pp_fade { display: none; }
+
+	.pp_content_container {
+		position: relative;
+		text-align: left;
+		width: 100%;
+	}
+
+		.pp_content_container .pp_left { padding-left: 13px; }
+		.pp_content_container .pp_right { padding-right: 13px; }
+
+		.pp_content_container .pp_details {
+			float: left;
+			margin: 10px 0 2px 0;
+		}
+			.pp_description {
+				display: none;
+				margin: 0;
+			}
+
+			.pp_social { float: left; margin: 0; }
+			.pp_social .facebook { float: left; margin-left: 5px; width: 55px; overflow: hidden; }
+			.pp_social .twitter { float: left; }
+
+			.pp_nav {
+				clear: right;
+				float: left;
+				margin: 3px 10px 0 0;
+			}
+
+			.pp_nav p {
+				float: left;
+				margin: 2px 4px;
+				white-space: nowrap;
+			}
+
+			.pp_nav .pp_play,
+			.pp_nav .pp_pause {
+				float: left;
+				margin-right: 4px;
+				text-indent: -10000px;
+			}
+
+			a.pp_arrow_previous,
+			a.pp_arrow_next {
+				display: block;
+				float: left;
+				//height: 15px;
+				margin-top: 3px;
+				overflow: hidden;
+				text-indent: -10000px;
+				//width: 14px;
+			}
+
+	.pp_hoverContainer {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2000;
+	}
+
+	.pp_gallery {
+		display: none;
+		left: 50%;
+		margin-top: -50px;
+		position: absolute;
+		z-index: 10000;
+	}
+
+		.pp_gallery div {
+			float: left;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.pp_gallery ul {
+			float: left;
+			height: 35px;
+			margin: 0 0 0 5px;
+			padding: 0;
+			position: relative;
+			white-space: nowrap;
+		}
+
+		.pp_gallery ul a {
+			border: 1px #000 solid;
+			border: 1px rgba(0,0,0,0.5) solid;
+			display: block;
+			float: left;
+			height: 33px;
+			overflow: hidden;
+		}
+
+		.pp_gallery ul a:hover,
+		.pp_gallery li.selected a { border-color: #fff; }
+
+		.pp_gallery ul a img { border: 0; }
+
+		.pp_gallery li {
+			display: block;
+			float: left;
+			margin: 0 5px 0 0;
+			padding: 0;
+		}
+
+		/*.pp_gallery li.default a {
+			background: url(#{$pp-images-path}/prettyPhoto/light_rounded/default_thumbnail.gif) 0 0 no-repeat;
+			display: block;
+			height: 33px;
+			width: 50px;
+		}*/
+
+		.pp_gallery li.default a img { display: none; }
+
+		.pp_gallery .pp_arrow_previous,
+		.pp_gallery .pp_arrow_next {
+			margin-top: 7px !important;
+		}
+
+	a.pp_next {
+		background: url(#{$pp-images-path}/prettyPhoto/default/btnNext.png) 10000px 10000px no-repeat;
+		display: block;
+		float: right;
+		height: 100%;
+		text-indent: -10000px;
+		width: 49%;
+	}
+
+	a.pp_previous {
+		background: url(#{$pp-images-path}/prettyPhoto/default/btnNext.png) 10000px 10000px no-repeat;
+		display: block;
+		float: left;
+		height: 100%;
+		text-indent: -10000px;
+		width: 49%;
+	}
+
+	a.pp_expand,
+	a.pp_contract {
+		cursor: pointer;
+		display: none;
+		position: absolute;
+		right: 30px;
+		text-indent: -10000px;
+		top: 10px;
+		z-index: 20000;
+	}
+
+	a.pp_close {
+		position: absolute; right: 0; top: 0;
+		display: block;
+		line-height:22px;
+		text-indent: -10000px;
+	}
+
+	.pp_bottom {
+		//height: 13px;
+		position: relative;
+	}
+		* html .pp_bottom { padding: 0 13px; }
+
+		.pp_bottom .pp_left {
+			height: 13px;
+			left: 0;
+			position: absolute;
+			width: 20px;
+		}
+		.pp_bottom .pp_middle {
+			height: 13px;
+			left: 13px;
+			position: absolute;
+			right: 13px;
+		}
+			* html .pp_bottom .pp_middle {
+				left: 0;
+				position: static;
+			}
+
+		.pp_bottom .pp_right {
+			height: 13px;
+			left: auto;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 20px;
+		}
+
+	.pp_loaderIcon {
+		display: block;
+		height: 24px;
+		left: 50%;
+		margin: -12px 0 0 -12px;
+		position: absolute;
+		top: 50%;
+		width: 24px;
+	}
+
+	#pp_full_res {
+		line-height: 1 !important;
+	}
+
+		#pp_full_res .pp_inline {
+			text-align: left;
+		}
+
+			#pp_full_res .pp_inline p { margin: 0 0 15px 0; }
+
+	.ppt {
+		color: #fff;
+		display: none;
+		font-size: 17px;
+		margin: 0 0 5px 15px;
+		z-index: 9999;
+	}

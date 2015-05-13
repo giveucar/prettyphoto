@@ -1,0 +1,13 @@
+{
+  "name": "jquery-prettyPhoto",
+  "version": "3.1.6",
+  "main": [
+    "dist/js/jquery.prettyPhoto.js",
+    "dist/css/prettyPhoto.css"
+  ],
+  "ignore": [
+    "*",
+    "!dist/**/*",
+    "!images/prettyPhoto/default/*"
+  ]
+}
